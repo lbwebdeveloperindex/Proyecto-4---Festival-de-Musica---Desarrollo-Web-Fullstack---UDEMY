@@ -1,0 +1,31 @@
+{
+  "name": "proyecto-4---festival-de-musica---desarrollo-web-fullstack---udemy",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS y NPM",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbwebdeveloperindex/Proyecto-4---Festival-de-Musica---Desarrollo-Web-Fullstack---UDEMY.git"
+  },
+  "keywords": [
+    "NPM",
+    "SASS",
+    "GULP"
+  ],
+  "author": "Lucas Bergara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lbwebdeveloperindex/Proyecto-4---Festival-de-Musica---Desarrollo-Web-Fullstack---UDEMY/issues"
+  },
+  "homepage": "https://github.com/lbwebdeveloperindex/Proyecto-4---Festival-de-Musica---Desarrollo-Web-Fullstack---UDEMY#readme",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.105.0"
+  }
+}

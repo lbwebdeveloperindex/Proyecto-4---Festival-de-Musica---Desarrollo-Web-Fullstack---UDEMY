@@ -1,0 +1,12 @@
+Package.json sirve para el manejo de dependencias basado en node.js
+
+Crear package.json: npm init (En terminal)
+
+Instalar SASS: npm i -D sass (En terminal, "-D" dado que es una dependencia de desarrollo)
+
+npm i (En terminal) descarga las dependencias
+
+"sass": "sass --watch src/scss:build/css" -> para compilar SASS, watch permite que cada vez que se hace un cambio en sass se ejecutela compilación automáticamente
+npm run sass (En terminal) -> para compilar SASS
+
+npm i --save-dev gulp
