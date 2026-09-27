@@ -1,8 +1,10 @@
-@use 'base/variables' as v;
-@forward 'base/normalize';
+@forward 'base';
+@forward 'layout';
 
-body {
-    font-family: v.$fuente_principal;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
+/*
+@use: Permite utilizar namespace, sirve cuando queremos acceder a variables del archivo.
+
+@forward: No permite utilizar namespace
+
+@impoort: Se utilizaba antes, en caso de indicar duplicado el código, se duplica lo que se importa
+*/

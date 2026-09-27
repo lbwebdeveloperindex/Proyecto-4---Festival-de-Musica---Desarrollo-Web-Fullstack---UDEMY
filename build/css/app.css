@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -307,8 +308,101 @@ template {
   display: none;
 }
 
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-padding-top: 0rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  color: #000000;
+  font-size: 2rem;
 }
+
+p {
+  color: #000000;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0 0 5rem 0;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 4.6rem;
+}
+
+h3 {
+  font-size: 6rem;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body > section {
+  padding: 10rem 0;
+}
+
+.header {
+  background-color: #4CB8B3;
+}
+@media (min-width: 480px) {
+  .header {
+    color: #FFFFFF;
+    width: 10px;
+    height: 1px;
+  }
+}
+.header .contenido-header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.navegacion-principal {
+  display: flex;
+  gap: 2rem;
+}
+.navegacion-principal a {
+  color: #FFFFFF;
+  font-family: 2.4rem;
+}
+.navegacion-principal a:hover {
+  color: #fdda00;
+}
+
+/*
+@use: Permite utilizar namespace, sirve cuando queremos acceder a variables del archivo.
+
+@forward: No permite utilizar namespace
+
+@impoort: Se utilizaba antes, en caso de indicar duplicado el código, se duplica lo que se importa
+*/
