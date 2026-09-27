@@ -6,7 +6,7 @@ const sass = gulpSass(dartSass);
 
 export function css( done ) {
     src('src/scss/app.scss')
-        .pipe( sass() )
+        .pipe( sass().on('error', sass.logError) )
         .pipe( dest('build/css') )
 
     done(); //Avisa que se finaliza la función
@@ -16,5 +16,5 @@ export function css( done ) {
 // Agregar   "type": "module", después de description en package.json para poder exportar las funciones
 
 export function dev() {
-    watch('src/scss/app.scss' ,css)
+    watch('src/scss/**/*.scss', css)
 }
