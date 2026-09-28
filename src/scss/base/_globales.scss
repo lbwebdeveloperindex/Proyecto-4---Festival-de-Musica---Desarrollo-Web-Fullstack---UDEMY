@@ -21,7 +21,11 @@ p {
     color: v.$negro;
     line-height: 1.5;
 }
-
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
 a {
     text-decoration: none;
 }
