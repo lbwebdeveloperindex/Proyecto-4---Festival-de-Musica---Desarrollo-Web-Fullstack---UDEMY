@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navegacionFija();
     creargaleria();
     resaltarEnlace();
+    scrollNav();
 });
 
 function navegacionFija() {
@@ -94,5 +95,19 @@ function resaltarEnlace() {
                 link.classList.add('active');
             }
         })
+    });
+}
+
+function scrollNav() {
+    const navLinks = document.querySelectorAll('.navegacion-principal a');
+
+    navLinks.forEach( link => {
+        link.addEventListener('click', evento => {
+            evento.preventDefault();
+            const sectToScroll = evento.target.getAttribute('href');
+            const section = document.querySelector(sectToScroll);
+
+            section.scrollIntoView({behavior : 'smooth'});
+        });
     });
 }
