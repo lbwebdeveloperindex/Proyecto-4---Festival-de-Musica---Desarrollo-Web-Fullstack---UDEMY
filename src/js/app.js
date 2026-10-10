@@ -27,6 +27,9 @@ function creargaleria() {
 
     for(let i = 1; i <= CANTIDAD_IMAGENES; i++) {
         const imagen = document.createElement('IMG');
+        imagen.loading = 'lazy'; // PERFORMANCE
+        imagen.width = "300";   // PERFORMANCE
+        imagen.height = "200";  // PERFORMANCE
         imagen.src =  `src/img/gallery/full/${i}.jpg`;
         imagen.alt = 'Imagen galería'
 

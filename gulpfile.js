@@ -10,7 +10,6 @@ export function js( done ) {
     src('src/js/app.js')
         .pipe(terser()) // PERFORMANCE emilina espacios en el JS, lo comprime
         .pipe( dest('build/js') )
-
     done()
 }
 
