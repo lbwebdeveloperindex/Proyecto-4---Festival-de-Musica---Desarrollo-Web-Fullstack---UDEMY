@@ -4,8 +4,11 @@ import gulpSass from 'gulp-sass'
 
 const sass = gulpSass(dartSass);
 
+import terser from 'gulp-terser'; //npm i --save-dev gulp-terser
+
 export function js( done ) {
     src('src/js/app.js')
+        .pipe(terser()) // PERFORMANCE emilina espacios en el JS, lo comprime
         .pipe( dest('build/js') )
 
     done()
@@ -13,7 +16,9 @@ export function js( done ) {
 
 export function css( done ) {
     src('src/scss/app.scss', {sourcemaps: true})
-        .pipe( sass().on('error', sass.logError) )
+        .pipe( sass({
+            style: 'compressed' // PERFORMANCE: emilina espacios en el CSS, lo comprime
+        }).on('error', sass.logError) )
         .pipe( dest('build/css', {sourcemaps: '.'}) ) // '.' genera un archivo .map de css de forma externa, {sourcemaps: true} lo hace de fomra interna
 
     done(); //Avisa que se finaliza la función
